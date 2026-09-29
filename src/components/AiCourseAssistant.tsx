@@ -41,9 +41,9 @@ export const AiCourseAssistant: React.FC<{ onOpenApplication: () => void }> = ({
       } else if (lower.includes('지원금') || lower.includes('수강료') || lower.includes('비용') || lower.includes('0원')) {
         botReply = '원 수강료는 9,493,000원에서 국민내일배움카드 지원 시 자부담금 0원~400,000원 수준으로 수강 가능합니다. 또한 국민취업지원제도 연계 시 월 최대 80만원의 훈련장려금을 받으실 수 있습니다!';
       } else if (lower.includes('신청') || lower.includes('절차') || lower.includes('상담')) {
-        botReply = '선발 절차는 [온라인 교육문의] → [방문 대면상담] → [인터뷰] → [최종 합격 발표] → [고용24 신청] 순으로 진행됩니다. 우측 상단 교육문의 버튼을 통해 지금 바로 접수하실 수 있습니다!';
+        botReply = '선발 절차는 [온라인 교육문의] → [방문 대면상담] → [인터뷰] → [최종 합격 발표] → [고용24 신청] 순으로 진행됩니다. 상단 교육문의 버튼 또는 상담신청 링크(https://naver.me/F8lHp37r)를 통해 지금 바로 접수하실 수 있습니다!';
       } else {
-        botReply = `문의해주신 "${query}" 내용에 대해 담당 전문 상담사가 1:1 상세 안내를 도와드릴 수 있습니다. [교육문의] 버튼을 통해 온라인 문의나 방문상담을 신청해보세요!`;
+        botReply = `문의해주신 "${query}" 내용에 대해 담당 전문 상담사가 1:1 상세 안내를 도와드릴 수 있습니다. [상담신청] 링크(https://naver.me/F8lHp37r)를 통해 온라인 문의나 1:1 맞춤 상담을 신청해보세요!`;
       }
 
       setMessages((prev) => [...prev, { sender: 'bot', text: botReply }]);
